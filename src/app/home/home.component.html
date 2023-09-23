@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-md-3 card" (click)="inbox()">
+            <h3>Inbox</h3>
+        </div>
+
+        <div class="col-md-5" *ngIf="showInboxChild">
+            <app-inbox></app-inbox>
+        </div>
+    </div>
+
+
+    <div class="row mt-5">
+        <div class="col-md-3 card" (click)="sent()">
+            <h3>Sent</h3>
+        </div>
+
+        <div class="col-md-5" *ngIf="showSentChild">
+            <app-sent></app-sent>
+        </div>
+    </div>
+
+    
+    <div class="row mt-5">
+        <div class="col-md-3 card" (click)="Fav()">
+            <h3>Fav</h3>
+        </div>
+        <div class="col-md-5" *ngIf="showFavChild">
+            <app-fav></app-fav>
+        </div>
+    </div>
+</div>

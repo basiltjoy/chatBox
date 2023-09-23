@@ -1,0 +1,60 @@
+<div class="container">
+   
+
+    <div class="form-group">
+        <select name="Name" [(ngModel)]="inboxSelectValue" (ngModelChange)="inputValue($event)">
+            <option  selected="selected" value="">select any value</option>
+            <option value="Amazon">Amazon</option>
+            <option value="Flipkart">Flipkart</option>
+            <option value="Jio">Jio</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <table>
+                <tr *ngFor="let item of inboxArray">
+                    <td [(ngModel)]="selectedValue" name="selectedValue" ngDefaultControl
+                        (click)="inboxArrayFn($event)">{{item}}</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="col-md-5 bg-info" *ngIf="amazonContent">
+            <div class="text-center mb-3 mt-2">
+                <button type="button" class="btn btn-secondary btn-sm" (click)="amazonClick()">Fav</button>
+                <button type="button" class="btn btn-secondary btn-sm mx-2" (click)="amazonDelete()">Delete</button>
+            </div>
+            <span>amazonContent</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta a perspiciatis ex laborum dignissimos,
+                voluptates delectus ea autem numquam? Ipsum suscipit tempora quia doloremque nemo laborum, in tempore
+                quam
+                facere.</p>
+        </div>
+
+        <div class="col-md-5 bg-warning" *ngIf="flipkartContent">
+            <div class="text-center mb-3 mt-2">
+                <button type="button" class="btn btn-secondary btn-sm" (click)="flipkartClick()">Fav</button>
+                <button type="button" class="btn btn-secondary btn-sm mx-2" (click)="flipkartDelete()">Delete</button>
+            </div>
+            <span>flipkartContent</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta a perspiciatis ex laborum dignissimos,
+                voluptates delectus ea autem numquam? Ipsum suscipit tempora quia doloremque nemo laborum, in tempore
+                quam
+                facere.</p>
+        </div>
+
+        <div class="col-md-5 bg-primary" *ngIf="jioContant">
+            <span>jioContant</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta a perspiciatis ex laborum dignissimos,
+                voluptates delectus ea autem numquam? Ipsum suscipit tempora quia doloremque nemo laborum, in tempore
+                quam
+                facere.</p>
+        </div>
+    </div>
+
+
+
+
+</div>
